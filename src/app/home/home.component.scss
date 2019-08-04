@@ -1,0 +1,35 @@
+$base-bg-color : #1976D2;
+$cells-bg-color : #BEBEBC;
+td, th{
+    border: 1px solid #000000;
+    padding: 5px;
+    // margin: auto;
+}
+th{
+    background-color: $base-bg-color;
+}
+tr{
+    background-color: $cells-bg-color;
+}
+tr:hover
+{
+    cursor: pointer;
+    background-color: burlywood !important ;
+}
+.second-table{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    padding: 5%;
+    background-color: $base-bg-color;
+
+}
+.table-btn{
+    background-color: #F36F96;
+    padding: 12px;
+    border: none;
+}
+.table-btn:hover{
+    background-color: aquamarine;
+}

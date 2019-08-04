@@ -1,0 +1,28 @@
+<table>
+    <th *ngFor="let title of titles">{{title}}</th>
+
+    <tr *ngFor="let user of users" (click)=loadAllData(user)>
+        <td>
+            {{user.name}}
+        </td>
+        <td>
+            {{user.url}}
+        </td>
+        <td>
+            {{user.date}}
+        </td>
+
+    </tr>
+</table>
+
+<div class="second-table" *ngIf="user.name">
+    <button class="table-btn" (click)=hideAllData()>Close</button>
+    <h2>All information for {{user.name}} </h2>
+    <p>name:{{user.name}} </p>
+    <p>url:{{user.url}}</p>
+    <p>date:{{user.date}}</p>
+    <p>place:{{user.place}}</p>
+    <p>course:{{user.course}}</p>
+</div>
+
+<!-- {{ hello }} -->
