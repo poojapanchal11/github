@@ -2,7 +2,7 @@
 <table>
     <th *ngFor="let title of titles">{{title}}</th>
 
-    <tr *ngFor="let user of usersDisplay" (click)=loadAllData(user)>
+    <tr *ngFor="let user of usersDisplay" >
         <td>
             {{user.login}}
         </td>
@@ -22,7 +22,7 @@
     </tr>
 </table>
 
-<div class="second-table" *ngIf="user.name">
+<!-- <div class="second-table" *ngIf="user.name">
     <button class="table-btn" (click)=hideAllData()>Close</button>
     <h2>All information for {{user.name}} </h2>
     <p>name:{{user.name}} </p>
@@ -30,6 +30,6 @@
     <p>date:{{user.date}}</p>
     <p>place:{{user.place}}</p>
     <p>course:{{user.course}}</p>
-</div>
+</div> -->
 
 <!-- {{ hello }} -->
