@@ -1,15 +1,22 @@
+<input [(ngModel)]="query" (ngModelChange)="findUser(query)" placeholder="Search for Users">
 <table>
     <th *ngFor="let title of titles">{{title}}</th>
 
-    <tr *ngFor="let user of users" (click)=loadAllData(user)>
+    <tr *ngFor="let user of usersDisplay" (click)=loadAllData(user)>
         <td>
-            {{user.name}}
+            {{user.login}}
         </td>
         <td>
             {{user.url}}
         </td>
         <td>
-            {{user.date}}
+            {{user.id}}
+        </td>
+        <td>
+            {{user.node_id}}
+        </td>
+        <td>
+            <img class="ava-img" src="{{user.avatar_url}}"  alt="">
         </td>
 
     </tr>
